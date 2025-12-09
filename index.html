@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selezione Colore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-image: url('img1.jpg'); /* Sfondo */
+            background-size: contain; 
+            background-position: center center;
+            background-attachment: fixed;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .title {
+            font-size: 3em;
+            margin-bottom: 50px;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.8);
+            display: inline-block;
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-weight: bold;
+        }
+
+        .color-choice {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap; /* Permette di andare su più righe se lo spazio è stretto */
+        }
+
+        .color-option {
+            text-align: center;
+            margin-bottom: 20px; /* Spazio tra righe su mobile */
+        }
+
+        .red-button, .blue-button {
+            color: white;
+            border: none;
+            padding: 25px 50px;
+            font-size: 1.5em;
+            cursor: pointer;
+            border-radius: 12px;
+            transition: transform 0.1s, box-shadow 0.2s;
+            font-weight: bold;
+        }
+
+        .red-button { background-color: red; }
+        .blue-button { background-color: blue; }
+
+        .red-button:hover, .blue-button:hover {
+            transform: scale(1.08);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        /* Media query per schermi piccoli (smartphone) */
+        @media (max-width: 600px) {
+            .title {
+                font-size: 2em;
+                padding: 15px 25px;
+                margin-bottom: 30px;
+            }
+
+            .color-choice {
+                flex-direction: column; /* Pulsanti uno sotto l'altro */
+                gap: 20px;
+            }
+
+            .red-button, .blue-button {
+                padding: 20px 40px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">Buon natale!!!<br>Scegli un colore:</h1>
+    
+    <div class="color-choice">
+        <div class="color-option">
+            <button class="red-button" onclick="window.open('https://youtu.be/R9cpOYMI9ZE?si=KxLdKs4FFwOUjJvr', '_blank')">Rosso</button>
+        </div>
+
+        <div class="color-option">
+            <button class="blue-button" onclick="window.open('https://youtu.be/FoS4gQMxLUM?si=DMfb6Q9Rh_a4xXj1', '_blank')">Blu</button>
+        </div>
+    </div>
+</body>
+</html>
